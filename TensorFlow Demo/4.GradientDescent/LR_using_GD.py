@@ -30,9 +30,11 @@ plt.show()
 
 # 构建线性回归模型
 W = tf.Variable(tf.random_uniform([1], -1.0, 1.0)) # 初始化 Weight
+print(W)
 b = tf.Variable(tf.zeros([1]))                     # 初始化 Bias
+print(b)
 y = W * x_data + b                                 # 模型计算出来的 y
-
+print(y)
 # 定义 loss function（损失函数）或 cost function（代价函数）
 # 对 Tensor 的所有维度计算 ((y - y_data) ^ 2) 之和 / N
 loss = tf.reduce_mean(tf.square(y - y_data))
